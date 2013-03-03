@@ -86,6 +86,7 @@ char *Surf3dResend(struct surf3d *ob, char *mess){
 	return NULL;
 }
 
+/* incomplete func def (was under dev, not essential to compile successfully)
 double Surf3dArea(struct surf3d *ob){
 	char **t1, **t2, **t3;
 	t1= decode(say(ob->p1, "cmd@get:x@:y@:z@:"));
@@ -101,6 +102,7 @@ double Surf3dArea(struct surf3d *ob){
 	double v2x= x3- x1, v2y= y3- y1, v2z= z3- z1;
 	
 }
+*/
 
 char *Surf3d(void *ob, char *mess){
 	char **t= decode(mess), **t1;	
