@@ -22,7 +22,7 @@ This program is free software: you can redistribute it and/or modify
 #define INSTRnUM 15
 
 struct p3d{
-  char *(*foo)(void *, char *);
+  	char *(*foo)(void *, char *);
 	double x, y, z;
 };
 
