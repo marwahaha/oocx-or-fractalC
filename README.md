@@ -1,5 +1,6 @@
 /*
 file README.md from oocx project. definition and explanation of oocx project.
+
 Copyright (C) 2013 Roger Gómez Castells
 
 This program is free software: you can redistribute it and/or modify
