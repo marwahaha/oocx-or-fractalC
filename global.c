@@ -23,7 +23,7 @@ char *say(void **ob, char *mess){
 	if(ob){				
 		return (*(char *(**)(void *, char *))ob)((void *)ob, mess);
 	}
-	return NULL;
+	return NULL; 
 }
 
 int stringLength(char *st){
