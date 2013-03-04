@@ -22,7 +22,7 @@ This program is free software: you can redistribute it and/or modify
 #define INSTRnUM 2
 
 struct surf3d{
-  char *(*foo)(void *, char *);
+  	char *(*foo)(void *, char *);
 	void *p1, *p2, *p3;
 	int p3dSel;
 };
