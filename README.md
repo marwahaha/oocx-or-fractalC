@@ -37,6 +37,17 @@ in that case, because of tokens are itself strings, it is not necessarily to mak
   
 That function use the standard library function strtod(,) function, but simplifying it. Returns double and accepts a char *. There is also the function dToStr() which takes a double and returns a string. That function makes use of the standard library sprintf twice, first to calculate the number of chars in the conversion, and after to really convert it and store it in a chain of chars, or string.
 
+Finally say and add that objects are of tipe void *. If we want to instantiate an object we do like this:
+
+  void *p1;
+  char **t;
+  if(t= decode(say(p3d, "cmd@replicate:output@:"))){
+    p1= (void *)((int)(strToD(t[3])));
+    free(code(&t));
+  }
+
+We give order or command 'replicate' to existing object 'p3d'. p3d will be the equivalent to a class, but it is an instance that define that class or type. It is declared as extern void *p3d[]; The array is necessary because it was defined as an array, of 1 element, to a struct p3d type. In that case 'struct p3d' and 'p3d' not enter in conflict because the first is a pair sequence and the second it is a token by its own. In the use of p3d we do not need, and don't do, to know the type of p3d, so we make it void *. It is for this reason that func say(,) it is definned as accepting void * * as first parameter (because of the couple void * and [] in the extern declaration).
+
 The term fractal C it is because objects with multiple inheritance can have a structure similar to fractals, in the sense the multiple branches in whatever order can appear in the evolution upstream. And also in the fact that everything, from a program to an OS, can be contemplated as an object in that way.
 
 The original term for that way of programming it is  OOCX (OOC and successive versions ended in OOCX).
