@@ -29,7 +29,7 @@ struct p3d{
 extern struct p3d p3d[];
 
 void *P3dReplicate(struct p3d *ob){
-	struct p3d *ob2= malloc(sizeof(struct p3d));
+	struct p3d *ob2= malloc(sizeof(struct p3d)); 
 	*ob2= *ob;
 	return ob2;
 }
