@@ -73,4 +73,17 @@ The term fractal C it is because objects with multiple inheritance can have a st
 
 The original term for that way of programming it is  OOCX (OOC and successive versions ended in OOCX).
 
+In order to talk more about inheritance, we can say inheritance is when an element (object in that case, or fractal object if you prefer to designate the kind of structure or branching an object can have) have anchored certain types of objects wich can be ressended messages to them when not accomplished by the one wich we are defining.
+
+To talk more about polymorphism, say that this way of programming is implicitly polymorphic. Objects are unifunctional objects. We achieve multifunctional character by the way of messages. Being unifunctional means that when we call the global func say(,) it resends the call to the specific function of the type. In C, the first element of a structure is what it gives the address to the structure. That is, the address of a struct is the one of its first element. For this reason, an object, to be one in this kind of programming, must be a structure beginning with a pointer that points to the function that defines the type (remember, unifunctional). So when we call say(,) we are doing polymorphism, calling the same function but eventually calling an specific function for each type. Once in the specific function for each type, messaging will do the rest. There will be intern functions on the class or type definition wich will then be called according to the message received (that gives multifuncional character).
+
+So we have that:
+  say(p1, "cmd@some:") will give a different result than 
+  say(a1, "cmd@some:") if a1 and p1 belongs or are instances of different types.
+  
+So to implement polymorphism in a more conventional way, the way of abstract or virtual classes, we must define a rule for the classes or types wich will be considered as example applications of the abstract convention. The is, the concept of abstract or virtual class is to ensure that certain types understand a set (minimum) of messages and inherits from a set (minimum) of elements (or objects) and resends messaging to them (multiple inheritance) in an specific order of priority. Being established that convention, every class or type we define that follows that convention will be considered as a descendent or an application of the abstract class concept. We can prefix the name of the type we define with the name given to that concept of abstract class or set of rules. 
+If we have shape as an abstract convention, every class or type we define following those rules (minimum set of messages to understand-define implementation, minimum set of objects to be anchored or from wich inherits, resend messages in specific order to that objects anchored) will be named as shapeSomething:
+  shapeTriangle, shapeSquare, etc.
+Then we can make an array of void * (void *arr[10]) assign pointers to objects to the elements of that array, being all of them of type shape... and be sure than applying say(arr[i],"message") will be understood by all and giving specific applications-implementations in each case. and also, if not understood, will be resend upstream giving the same results if resent.
+
 Ok, hope you like and enjoy it, find it usefull and apply it to your own code and projects. Good Luck!!!
