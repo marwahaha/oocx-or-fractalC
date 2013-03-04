@@ -1,5 +1,23 @@
-oocx-or-fractalC
-================
+/*
+file README.md from oocx project. definition and explanation of oocx project.
+Copyright (C) 2013 Roger Gómez Castells
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+oocx
+====
 This is C as C++ but C, or fractal C, or OOCX. In essence is a way to program C, to structure code, to allow OO design characteristics on C as C++.
 It has a unique interface to dialog with objects, function say(,). That function accepts as a first argument a pointer to an object and as a second argument the message we want to give to that object. If the object understands the message will do whatever it is programmed to do and will answer us with another message. Message passing it is through a chain of pairs field@value: or attribute@value:. The order or sequence of the pairs in the chain it is indifferent. Message answer will be gived to us in the same order of pairs we gived or passed to the object, no matter how the object really keep the order of pairs in its own sequence. What must coincide in order for the object to accept the message it is the number of pairs and the first part of each pair, that is, the field name. There is an exception, for the 'cmd' (standing for command abreviation) field name also value name (or chars) will be checked. That is, if we pass 'cmd@length:' and the object has as a message 'cmd@put:' but not the first one, will not operate.
 
