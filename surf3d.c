@@ -34,15 +34,15 @@ void *Surf3dReplicate(struct surf3d *ob){
 	struct surf3d *ob2= malloc(sizeof(struct surf3d));
 	*ob2= *ob;
 	char **t= NULL;
-	if(t= decode(say(p3d, "cmd@replicate:output@:"))){
+	if(t= decode(say(p3d, stringCopy("cmd@replicate:output@:")))){
 		ob2->p1= (void *)((int)strToD(t[3]));
 		free(code(&t));
 	}
-	if(t= decode(say(p3d, "cmd@replicate:output@:"))){
+	if(t= decode(say(p3d, stringCopy("cmd@replicate:output@:")))){
 		ob2->p2= (void *)((int)strToD(t[3]));
 		free(code(&t));
 	}
-	if(t= decode(say(p3d, "cmd@replicate:output@:"))){
+	if(t= decode(say(p3d, stringCopy("cmd@replicate:output@:")))){
 		ob2->p3= (void *)((int)strToD(t[3]));
 		free(code(&t));
 	}
@@ -107,8 +107,8 @@ double Surf3dArea(struct surf3d *ob){
 char *Surf3d(void *ob, char *mess){
 	char **t= decode(mess), **t1;	
 	char *mess1[INSTRnUM]=	{
-	/*0*/	"cmd@replicate:output@:",
-	/*1*/	"cmd@select:p3d@:"
+	/*0*/	stringCopy("cmd@replicate:output@:"),
+	/*1*/	stringCopy("cmd@select:p3d@:")
 	};
 	int i;
 	for(i= 0; i< INSTRnUM; i++){
