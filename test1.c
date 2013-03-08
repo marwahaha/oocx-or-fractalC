@@ -25,19 +25,19 @@ extern void *surf3d[];
 int main(){
   char **t= NULL;
 	void *s1= NULL;
-	if(t= decode(say(surf3d, "cmd@replicate:output@:"))){
+	if(t= decode(say(surf3d, stringCopy("cmd@replicate:output@:")))){
 		s1= (void *)((int)strToD(t[3]));
 		free(code(&t));
 	}
 	if(s1){
-		free(say(s1, "cmd@select:p3d@1:"));
-		free(say(s1, "cmd@put:x@1.2:y@-3.4:z@8:"));
-		if(t= decode(say(s1, "cmd@get:x@:y@:z@:"))){
+		free(say(s1, stringCopy("cmd@select:p3d@1:")));
+		free(say(s1, stringCopy("cmd@put:x@1.2:y@-3.4:z@8:")));
+		if(t= decode(say(s1, stringCopy("cmd@get:x@:y@:z@:")))){
 			printf("%s\t%s\t%s\n", t[3], t[5], t[7]);
 			free(code(&t));
 		}
-		free(say(s1, "cmd@select:p3d@2:"));
-		if(t= decode(say(s1, "cmd@get:x@:y@:z@:"))){
+		free(say(s1, stringCopy("cmd@select:p3d@2:")));
+		if(t= decode(say(s1, stringCopy("cmd@get:x@:y@:z@:")))){
 			printf("%s\t%s\t%s\n", t[3], t[5], t[7]);
 			free(code(&t));
 		}

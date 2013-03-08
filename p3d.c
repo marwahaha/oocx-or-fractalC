@@ -61,21 +61,21 @@ double P3dGetZ(struct p3d *ob){
 char *P3d(void *ob, char *mess){
 	char **t= decode(mess), **t1;	
 	char *mess1[INSTRnUM]=	{
-	/*0*/	"cmd@replicate:output@:",
-	/*1*/	"cmd@put:x@:",
-	/*2*/	"cmd@put:y@:",
-	/*3*/	"cmd@put:z@:",
-	/*4*/	"cmd@put:x@:y@:",
-	/*5*/	"cmd@put:x@:z@:",
-	/*6*/	"cmd@put:y@:z@:",
-	/*7*/	"cmd@put:x@:y@:z@:",
-	/*8*/	"cmd@get:x@:",
-	/*9*/	"cmd@get:y@:",
-	/*10*/	"cmd@get:z@:",
-	/*11*/	"cmd@get:x@:y@:",
-	/*12*/	"cmd@get:x@:z@:",
-	/*13*/	"cmd@get:y@:z@:",
-	/*14*/	"cmd@get:x@:y@:z@:"
+	/*0*/	stringCopy("cmd@replicate:output@:"),
+	/*1*/	stringCopy("cmd@put:x@:"),
+	/*2*/	stringCopy("cmd@put:y@:"),
+	/*3*/	stringCopy("cmd@put:z@:"),
+	/*4*/	stringCopy("cmd@put:x@:y@:"),
+	/*5*/	stringCopy("cmd@put:x@:z@:"),
+	/*6*/	stringCopy("cmd@put:y@:z@:"),
+	/*7*/	stringCopy("cmd@put:x@:y@:z@:"),
+	/*8*/	stringCopy("cmd@get:x@:"),
+	/*9*/	stringCopy("cmd@get:y@:"),
+	/*10*/	stringCopy("cmd@get:z@:"),
+	/*11*/	stringCopy("cmd@get:x@:y@:"),
+	/*12*/	stringCopy("cmd@get:x@:z@:"),
+	/*13*/	stringCopy("cmd@get:y@:z@:"),
+	/*14*/	stringCopy("cmd@get:x@:y@:z@:")
 	};
 	int i;
 	for(i= 0; i< INSTRnUM; i++){

@@ -22,3 +22,4 @@ char **decode(char *);
 void arrange(char ***, char **);
 double strToD(char *);
 char *dToStr(double);
+char *stringCopy(char *);

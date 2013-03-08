@@ -189,7 +189,7 @@ char *code(char ***rt){
 	char **t= *rt;
 	char *code= NULL;
 	if(t){
-		code= "";
+		code= stringCopy("");
 		int i;
 		for(i= 0; t[i*2]; i++){
 			stringConcat(&code, t[i*2]);

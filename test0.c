@@ -26,26 +26,26 @@ int main(){
   char **t= NULL;
  	void *p1= NULL;
 			
-	if(t= decode(say(p3d, "cmd@replicate:output@:"))){		
+	if(t= decode(say(p3d, stringCopy("cmd@replicate:output@:")))){		
 		p1= (void *)((int)strToD(t[3]));		
 		free(code(&t));
 	}				
 	
 	if(p1){		
-		if(t= decode(say(p1, "cmd@get:x@:z@:y@:"))){
+		if(t= decode(say(p1, stringCopy("cmd@get:x@:z@:y@:")))){
 			printf("\n%s\t%s\t%s", t[3], t[7], t[5]);
 			free(code(&t));
 		}
 	
-		free(say(p1, "cmd@put:x@.1:")); 
-		free(say(p1, "cmd@put:y@2.1:z@3.2:x@-1.2:"));	
+		free(say(p1, stringCopy("cmd@put:x@.1:"))); 
+		free(say(p1, stringCopy("cmd@put:y@2.1:z@3.2:x@-1.2:")));	
 
-		if(t= decode(say(p1, "x@:cmd@get:"))){	
+		if(t= decode(say(p1, stringCopy("x@:cmd@get:")))){	
 			printf("\n%s", t[1]);
 			free(code(&t));
 		}
 
-		if(t= decode(say(p1, "cmd@get:y@:z@:"))){
+		if(t= decode(say(p1, stringCopy("cmd@get:y@:z@:")))){
 			printf("\t%s\t%s", t[3], t[5]);
 			free(code(&t));
 		}
